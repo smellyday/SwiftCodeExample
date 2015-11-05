@@ -20,8 +20,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         redview.backgroundColor = UIColor.redColor()
+        redview.translatesAutoresizingMaskIntoConstraints = false
         blueview.backgroundColor = UIColor.blueColor()
+        redview.translatesAutoresizingMaskIntoConstraints = false
         yellowview.backgroundColor = UIColor.yellowColor()
+        redview.translatesAutoresizingMaskIntoConstraints = false
         
         mainStackview.addArrangedSubview(redview)
         mainStackview.addArrangedSubview(blueview)
