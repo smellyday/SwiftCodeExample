@@ -18,12 +18,11 @@ class ViewController: UIViewController {
         var nFrame = aview.frame
         nFrame.size.width += 20
         aview.frame = nFrame
-        aview.backgroundColor = UIColor.yellowColor()
     }
     
     @IBAction func onClickColorBtn() {
         print("\n\n ====> Color Button: \(__FUNCTION__)")
-        aview.backgroundColor = UIColor.yellowColor()
+        aview.backgroundColor = UIColor.brownColor()
     }
     
     @IBAction func onClickContraintBtn() {
@@ -92,6 +91,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.yellowColor()
+        
         aview.viewName = "FatherView"
         
         /* UIView contentMode */
@@ -104,6 +105,8 @@ class ViewController: UIViewController {
         aview.addSubview(bigView)
         aview.clipsToBounds = true
         
+        /* UIView userInteractionEnabled could affact view's subview */
+        self.view.userInteractionEnabled = true
         
     }
 

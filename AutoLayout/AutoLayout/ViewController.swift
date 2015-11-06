@@ -61,6 +61,20 @@ class ViewController: UIViewController {
         let heightCons = NSLayoutConstraint(item: subview, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Height, multiplier: 0.3, constant: 0)
         
         NSLayoutConstraint.activateConstraints([topCons, leadingCons, widthCons, heightCons])
+        
+        /*
+        - addConstraint:
+        
+        The constraint must involve only views that are within scope of the receiving view. Specifically, any views involved must be either the receiving view itself, or a subview of the receiving view. Constraints that are added to a view are said to be held by that view. The coordinate system used when evaluating the constraint is the coordinate system of the view that holds the constraint.
+        
+        When developing for iOS 8.0 or later, set the constraint’s active property to YES instead. This automatically adds the constraint to the correct view.
+        */
+        
+        /*
+        - removeConstraint:
+        
+        When developing for iOS 8.0 or later, set the constraint’s active property to NO instead. This automatically removes the constraint from the correct view.
+        */
     }
     
     func addSubViewWithNSLayoutAnchor() {
